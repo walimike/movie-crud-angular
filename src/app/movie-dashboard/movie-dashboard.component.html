@@ -1,0 +1,73 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 class="movie-title">Movie store</h1>
+        <div class="d-flex">
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Movie</button>
+        </div>
+    </div>
+</nav>
+<table class="table mt-5">
+    <thead>
+        <tr>
+            <th scope="col1">Tiltle</th>
+            <th scope="col1">Genres</th>
+            <th scope="col1">Budget</th>
+            <th scope="col1">Studio(s)</th>
+            <th scope="col1">Popularity</th>
+            <th scope="col1">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                <button class="btn btn-success">Edit</button>
+                <button class="btn btn-danger mx-3">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+  
+<!-- Add Movie Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add movie</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="formValue">
+                    <div class="mb-3">
+                    <label for="movieTitle" class="form-label">Movie title</label>
+                    <input type="text" formControlName="movieTitle" class="form-control" id="movieTitle">
+                    </div>
+                    <div class="mb-3">
+                    <label for="movieGenre" class="form-label">Genre</label>
+                    <input type="text" formControlName="movieGenre" class="form-control" id="movieGenre">
+                    </div>
+                    <div class="mb-3">
+                    <label for="movieBudget" class="form-label">Budget</label>
+                    <input type="text" formControlName="movieBudget" class="form-control" id="movieBudget">
+                    </div>
+                    <div class="mb-3">
+                    <label for="movieStudio" class="form-label">Studio</label>
+                    <input type="text" formControlName="movieStudio" class="form-control" id="movieStudio">
+                    </div>
+                    <div class="mb-3">
+                    <label for="moviePopularity" class="form-label">Popularity</label>
+                    <input type="text" formControlName="moviePopularity" class="form-control" id="moviePopularity">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
