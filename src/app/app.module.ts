@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HotTableModule } from '@handsontable/angular';
+
 import { MovieDashboardComponent } from './movie-dashboard/movie-dashboard.component';
 
 @NgModule({
@@ -14,7 +16,8 @@ import { MovieDashboardComponent } from './movie-dashboard/movie-dashboard.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HotTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
